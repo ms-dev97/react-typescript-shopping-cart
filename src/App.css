@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: #fcfcfc;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  border: none;
+  font-family: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Navbar */
+.nav {
+  background-color: #fff;
+  padding: 15px 5vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Products */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 5vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.product-card .thumbnail {
+  height: 200px;
+  overflow: hidden;
+}
+.product-card .body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.product-card .info {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-card .name {
+  margin: 0;
+  font-weight: 500;
+}
+.product-card .atc {
+  background-color: #085db5;
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.product-card .in-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+.product-card .update-quantity {
+  width: 35px;
+  height: 35px;
+  background-color: #085db5;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  display: grid;
+}
+.product-card .quantity > span {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.product-card .remove {
+  background-color: #b50808;
+  color: #fff;
+  display: block;
+  padding: 7px 15px;
+  margin: auto;
+}
