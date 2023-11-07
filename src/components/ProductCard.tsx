@@ -19,7 +19,7 @@ export default function ProductCard({id, title, price, image}: product) {
                     <div className="price">${price}</div>
                 </div>
                 {getItemQuantity(id) == 0 ? (
-                    <button className="atc" onClick={(): void => increaseItemQuantity(id)}>
+                    <button className="atc" onClick={(): void => increaseItemQuantity(id, title, image, price)}>
                         Add to Cart
                     </button>
                 ) : (
