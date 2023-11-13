@@ -5,7 +5,8 @@ type shoppingCartContextType = {
     getItemQuantity: (id: number) => number,
     increaseItemQuantity: (id: number) => void,
     decreaseItemQuantity: (id: number) => void,
-    removeItem: (id: number) => void
+    removeItem: (id: number) => void,
+    cartTotalPrice: () => void
 }
 
 type cartItem = {
@@ -45,6 +46,10 @@ export function ShoppingCartProvidor({children}: ReactNode) {
         });
     }
 
+    function cartTotalPrice(): number {
+        return cartItems.reduce((a, b): number => a + (b.price * b.quantity), 0);
+    }
+
     function removeItem(id: number) {
         setCartItems(items => {
             return items.filter(item => item.id != id);
@@ -57,7 +62,8 @@ export function ShoppingCartProvidor({children}: ReactNode) {
             getItemQuantity,
             increaseItemQuantity,
             decreaseItemQuantity,
-            removeItem
+            removeItem,
+            cartTotalPrice
         }}>
             {children}
         </shoppingCartContext.Provider>

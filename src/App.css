@@ -29,6 +29,34 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.nav .cart-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #085db5;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.nav .cart-btn svg {
+  display: block;
+  fill: #085db5;
+}
+.nav .cart-btn .count {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #b50808;
+  font-size: 0.875rem;
+  border-radius: 50%;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transform: translate(40%, 19%);
+}
 
 /* cart */
 .cart {
@@ -43,6 +71,20 @@ button {
 	background: rgba(0, 0, 0, 0.7);
 	z-index: 1;
 }
+.cart .cart-header {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.cart .cart-header .close {
+  cursor: pointer;
+}
 .cart .cart-items {
 	position: relative;
 	z-index: 2;
@@ -53,13 +95,65 @@ button {
 }
 .cart .cart-item {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 .cart .cart-item .thumbnail > img {
-  width: 150px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
-
+.cart .cart-item .info {
+  flex: 1;
+}
+.cart .cart-item .title {
+  font-size: 1.125rem;
+}
+.cart .cart-item .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.cart .cart-item .unit-price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6f6f6f;
+}
+.cart .cart-item .price .left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cart .cart-item .price .total-price {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.cart .cart-item .price .remove {
+  padding: 5px;
+  border: 2px solid #b50808;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.cart .cart-item .price .remove:hover {
+  background-color: #b50808;
+}
+.cart .cart-item .price .remove > svg {
+  display: block;
+  fill: #b50808;
+}
+.cart .cart-item .price .remove:hover > svg {
+  fill: #fff;
+}
+.cart-total {
+  border-top: 1px solid #d9d9d9;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: end;
+}
 
 /* Products */
 .products {
